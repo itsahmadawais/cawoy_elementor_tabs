@@ -1,0 +1,124 @@
+.cawoy_elementor_header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cawoy_elementor_header ul {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .cawoy_elementor_header ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.cawoy_elementor_header ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  cursor: pointer;
+  position: relative;
+  margin: 0 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .cawoy_elementor_header ul li {
+    margin: 0.4rem;
+  }
+}
+
+.cawoy_elementor_header ul li .item {
+  padding: 1rem;
+}
+
+.cawoy_elementor_header ul li .timer {
+  height: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.cawoy_elementor_header ul li .timer .progress {
+  position: absolute;
+  height: 100%;
+  width: 0;
+}
+
+.cawoy_tabs_content .cawoy_tab {
+  display: none;
+  padding: 1rem 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .cawoy_tabs_content .cawoy_tab {
+    padding: 0 2rem;
+  }
+}
+
+.cawoy_tabs_content .cawoy_tab.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .cawoy_tabs_content .cawoy_tab.active {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+
+.cawoy_tabs_content .cawoy_tab .cawoy_tab_content_container,
+.cawoy_tabs_content .cawoy_tab .cawoy_tab_image_container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+@media (max-width: 768px) {
+  .cawoy_tabs_content .cawoy_tab .cawoy_tab_content_container,
+  .cawoy_tabs_content .cawoy_tab .cawoy_tab_image_container {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+}
+
+.cawoy_tabs_content .cawoy_tab .cawoy_tab_content_container .heading {
+  margin: 0;
+}
+
+.cawoy_tabs_content .cawoy_tab .cawoy_tab_content_container .cawoy_tab_content_cta .cawoy_tab_content_btn {
+  padding: 0.5rem 2rem;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+}
+
+.cawoy_tabs_content .cawoy_tab .cawoy_tab_image_container {
+  text-align: center;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

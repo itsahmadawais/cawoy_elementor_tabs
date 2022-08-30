@@ -1,0 +1,107 @@
+@mixin breakpoint($class) {
+    @if $class==xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $class==sm {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $class==lg {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+.cawoy_elementor_header{
+    box-sizing: border-box;
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        align-items: center;
+        @include breakpoint(sm){
+            flex-wrap: wrap;
+        }
+        li{
+            flex: 1 1 auto;
+            cursor: pointer;
+            position: relative;
+            margin: 0 0.2rem;
+            @include breakpoint(sm){
+                margin: 0.4rem;
+            }
+            .item{
+                padding: 1rem;
+            }
+            &.active{
+
+            }
+            .timer{
+                height: 5px;
+                width: 100%;
+                position: relative;
+                .progress{
+                    position: absolute;
+                    height: 100%;
+                    width:0;
+                }
+            }
+        }
+    }
+}
+.cawoy_tabs_content{
+    .cawoy_tab{
+        display: none;
+        padding: 1rem 0.3rem;
+        @include breakpoint(sm){
+            padding: 0 2rem;
+        }
+        &.active{
+            display: flex;
+            @include breakpoint(sm){
+                flex-wrap: wrap;
+                flex-direction: column;
+                flex-direction: column-reverse;
+            }
+        }
+        .cawoy_tab_content_container,
+        .cawoy_tab_image_container{
+            flex: 1 1;
+            @include breakpoint(sm){
+                flex: 100%;
+                flex-wrap: wrap-reverse;
+            }
+        }
+        .cawoy_tab_content_container{
+            .heading{
+                margin: 0;
+            }
+            .cawoy_tab_content_cta{
+                .cawoy_tab_content_btn{
+                    padding: 0.5rem 2rem;
+                    display: block;
+                    width: fit-content;
+                    border-radius: 0.3rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+        .cawoy_tab_image_container{
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+}
